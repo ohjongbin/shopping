@@ -53,7 +53,7 @@ public class NoticeController {
 	    }
 	 
 	  }
-	@GetMapping("/admin/notice/update")
+	@GetMapping("/admin/notice/update")//admin 계정시에
 	  public String update(int noticeno, Model model) {
 	    
 	    model.addAttribute("dto", service.read(noticeno));
