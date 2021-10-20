@@ -29,7 +29,7 @@ public class ContentsController {
 	@Autowired
 	@Qualifier("com.study.contents.ContentsServiceImpl")
 	private ContentsService service;
-
+	
 	@GetMapping("/contents/detail/{contentsno}")
 	public String detail(@PathVariable("contentsno") int contentsno, Model model) {
 	    

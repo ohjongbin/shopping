@@ -23,14 +23,14 @@ public class NoticeController {
 	@Qualifier("com.study.notice.NoticeServiceImpl")
 	private NoticeService service;
 	
-	  @GetMapping("/notice/delete")
+	  @GetMapping("/admin/notice/delete")
 	  public String delete() {
 	 
 	 
 	    return "/notice/delete";
 	  }
 	  
-	  @PostMapping("/notice/delete")
+	  @PostMapping("/admin/notice/delete")
 	  public String delete(HttpServletRequest request, int noticeno, String passwd) {
 	 
 	    Map map = new HashMap();
@@ -53,7 +53,7 @@ public class NoticeController {
 	    }
 	 
 	  }
-	@GetMapping("/notice/update")
+	@GetMapping("/admin/notice/update")
 	  public String update(int noticeno, Model model) {
 	    
 	    model.addAttribute("dto", service.read(noticeno));

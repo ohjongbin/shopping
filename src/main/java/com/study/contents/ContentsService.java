@@ -20,5 +20,6 @@ public interface ContentsService {
 	List<Map> getCategory();
 	
 	List<ContentsDTO> mainlist(Map map);
-
+	
+	
 }
