@@ -18,7 +18,7 @@
 
 > # 프로젝트 기능흐름도
 >
-> <img src="README.assets/기능흐름도.png" height="300px" width="700px" align="left">
+> ![기능흐름도](README.assets/%EA%B8%B0%EB%8A%A5%ED%9D%90%EB%A6%84%EB%8F%84.png)
 
 > # 추가적으로 구현할 기능
 
