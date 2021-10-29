@@ -3,26 +3,14 @@
 > # 쇼핑몰 프로젝트 기능
 
 - 회원가입 
-
-  
-
-  <img src="README.assets/회원가입.png" height="300px" width="700px" align="left">
-
-- 
-
-
-
+- 회원 관리 
 - 로그인 /로그아웃
-
-  
-
-  <img src="README.assets/로그인화면.png" height="300px" width="700px" align="left">
 
 - 상풍등록/상품 목록 /상품 수정
 
 - 챗 봇
 
-- 마이페이지
+- 마이페이지 (사진 , 개인정보 수정)
 
 - 회원 목록
 
