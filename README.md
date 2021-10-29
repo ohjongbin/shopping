@@ -2,9 +2,21 @@
 
 > # 쇼핑몰 프로젝트 기능
 
-- 회원가입 /수정 /탈퇴 /목록
+- 회원가입 
+
+  
+
+  <img src="README.assets/회원가입.png" height="300px" width="700px" align="left">
+
+- 
+
+
 
 - 로그인 /로그아웃
+
+  
+
+  <img src="README.assets/로그인화면.png" height="300px" width="700px" align="left">
 
 - 상풍등록/상품 목록 /상품 수정
 
@@ -16,13 +28,9 @@
 
 - 상품 상세 페이지
 
-  
-
 > # 프로젝트 기능흐름도
-
-![](README.assets/image-20211029142601788.png)
-
-
+>
+> <img src="README.assets/기능흐름도.png" height="300px" width="700px" align="left">
 
 > # 추가적으로 구현할 기능
 
