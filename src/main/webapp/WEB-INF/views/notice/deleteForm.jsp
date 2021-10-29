@@ -16,7 +16,7 @@
  
 <h2 class="col-sm-offset-2 col-sm-10">삭제</h2>
 <form class="form-horizontal" 
-      action="./delete"
+      action="/admin/notice/delete"
       method="post"
       >
   <input type="hidden" name="noticeno" value="${param.noticeno}">

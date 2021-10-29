@@ -19,8 +19,10 @@ img {
  
 <div class="container">
     <p><a href="./contents/mainlist/1" >SHOP NOW</a></p>
-    <img src="./images/jeans.jpg" alt="Jeans">
     
+    <img src="./images/jeans.jpg" alt="Jeans"> 
 </div>
+
+
 </body> 
 </html>

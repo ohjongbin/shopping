@@ -5,6 +5,7 @@
 <head>
   <title>회원약관</title>
   <meta charset="utf-8">
+  
   <script type="text/javascript">
   function send(){
     if(document.frm.agree.checked == false){ 
@@ -21,12 +22,15 @@
 <div class="container">
 <h2 class="col-sm-offset-1 col-sm-11">약관동의</h2>
 <form class="form-horizontal" 
-      action="createForm"
+      action="createForm"  
       method="post"
       onsubmit="return send()"
       name = "frm"
       >
- 
+ <!-- action(어디로?) createForm  => http://localhost:8000/member/createForm 
+      method(어떻께) post 방식으로.
+      onsubmit(버튼클릭시) send() 함수 실행
+ -->
   
   <div class="form-group">
     <label class="control-label col-sm-1" for="content"></label>
@@ -217,7 +221,7 @@
    <div class="col-sm-offset-2 col-sm-5">
     <input id="agree" type="checkbox" name="agree" value="1" ><label for="agree"> 약관에 동의합니다 </label>
     
-    <button class="btn">회원가입</button>
+    <button class="btn">회원가입</button> <!-- form  action 태그로 인해 페이지 이동. -->
     <button type="button" class="btn" onclick="history.back()">취소</button>
    </div>
  </div>

@@ -18,16 +18,19 @@
 
 <script type="text/javascript">
     function updateM(){
-      var url = "update";
+      var url = "/admin/notice/update";
       url += "?noticeno=${dto.noticeno}";
       location.href=url;
     }
     function deleteM(){
-      var url = "delete";
+      var url = "/admin/notice/delete";
       url += "?noticeno=${dto.noticeno}";
       location.href=url;
     }
-    
+    function createM(){
+        var url = "/admin/notice/create";
+        location.href=url;
+      }
     
     function listM(){
         var url = "list";
@@ -64,8 +67,7 @@
 			<c:choose>
 				<c:when
 					test="${not empty sessionScope.id && sessionScope.grade == 'A'}">
-					<button type="button" class="btn"
-						onclick="location.href='./create'">등록</button>
+					<button type="button" class="btn" onclick="createM()">등록</button>
 					<button type="button" class="btn" onclick="updateM()">수정</button>
 					<button type="button" class="btn" onclick="deleteM()">삭제</button>
 				</c:when>

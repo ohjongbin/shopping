@@ -32,32 +32,9 @@
 <body>
 <div class="container">
  
-  <h2>상품 목록</h2>
+  <h2>장바 구니</h2>
   <form class="form-inline" action="./list">
-    <div class="form-group">
-      <select class="form-control" name="col">
-        <option value="cateno"
-        <c:if test= "${col=='cateno'}"> selected </c:if>
-        >상품분류(Jean:1,Bag:2)</option>
-        <option value="pname"
-        <c:if test= "${col=='pname'}"> selected </c:if>
-        >상품명</option>
-        <option value="price"
-        <c:if test= "${col=='price'}"> selected </c:if>
-        >가격</option>
-        <option value="total"
-        <c:if test= "${col=='total'}"> selected </c:if>
-        >전체출력</option>       
-     </select>
-    </div>
-    <div class="form-group">
-      <input type="text" class="form-control" placeholder="Enter 검색어" 
-      name="word" value="${word}">
-    </div>
-    <button type="submit" class="btn btn-default" >검색</button>
-    <button type="button" class="btn btn-default" onclick="location.href='../admin/create'">등록</button>
-  </form>
-  
+   
   <table class="table table-striped">
    <thead>
     <tr>
@@ -65,9 +42,8 @@
     <th>상품이미지</th>
     <th>상품명</th>
     <th>가격</th>
-    <th>등록날짜</th>
     <th>재고</th>
-    <th>수정/삭제/이미지수정</th>
+    <th>삭제</th>
     </tr>
    </thead>
    <tbody>

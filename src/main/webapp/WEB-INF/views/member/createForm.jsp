@@ -13,7 +13,9 @@
 		color : red;
 	}
 </style>
+
   <script type="text/javascript">
+  
   function idCheck(id){
 	  if(id==''){
 		  alert("아이디를 입력하세요");
@@ -22,6 +24,7 @@
 		  var url = "idcheck";
 		  var param = "id="+id;
 		  
+		  //$.get = HTTP GET 요청을 하여 서버로 부터 데이터를 로드한다.
 		  $.get(url, param, function(data, textStatus) {
 
 			  $("#idcheck").text(data.str);
@@ -95,6 +98,7 @@
         }).open();
     }
 </script>
+
 <script type="text/javascript">
 function inCheck(f){
 	if(f.id.value.length==0){
@@ -152,19 +156,23 @@ function inCheck(f){
 <h2 class="col-sm-offset-2 col-sm-10">회원가입</h2>
 <label class="col-sm-offset-2 col-sm-10">(<span id="need">*</span> 필수입력사항)</label>
   <form class="form-horizontal" 
-        action="create"
+        action="create" 
         method="post"
         name = 'frm'
         enctype="multipart/form-data"
         onsubmit="return inCheck(this)"
         >
+        <!-- action(어디로) = http://localhost:8000/member/create  -->
+        <!-- enctype="multipart/form-data" = 파일 등록시 데이터를 인코딩 하는 역활 -->
     <div class="form-group">
       <label class="control-label col-sm-2" for="fnameMF">사진</label>
       <div class="col-sm-4">
         <input type="file" class="form-control" id="fnameMF" 
         name="fnameMF" accept=".jpg,.gif,.png">
+        <!-- input type= "file"  내컴퓨터의 파일을 선택 할 수 있게 해준다. -->
       </div>
     </div>
+    
     <div class="form-group">
       <label class="control-label col-sm-2" for="id"><span id="need">*</span>아이디</label>
       <div class="col-sm-3">          
@@ -172,7 +180,7 @@ function inCheck(f){
         name="id">
       </div>
       <button type="button" class="btn btn-default col-sm-2"
-      onclick="idCheck(document.frm.id.value)">ID 중복확인</button>
+      onclick="idCheck(document.frm.id.value)">ID 중복확인</button> <!-- input태그에 입력한 값을 매개변수로 갖는다. -->
       <div id="idcheck"></div>
     </div>
     <div class="form-group">
@@ -219,7 +227,7 @@ function inCheck(f){
       <label class="control-label col-sm-2" for="sample6_postcode">우편번호</label>
       <div class="col-sm-1">          
         <input type="text" class="form-control" 
-         name="zipcode" id="sample6_postcode" placeholder="우편번호">
+         name="zipcode" id="sample6_postcode" placeholder="우편번호  ">
       </div>
       
       <button type="button" class="btn btn-default col-sm-2"
@@ -259,9 +267,10 @@ function inCheck(f){
        
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-5">
-        <button type="submit" class="btn btn-default">등록</button>
+        <button type="submit" class="btn btn-default">등록</button> <!-- form action태그 진행 -->
         <button type="reset" class="btn btn-default">취소</button>
       </div>
+      
     </div>
   </form>
 

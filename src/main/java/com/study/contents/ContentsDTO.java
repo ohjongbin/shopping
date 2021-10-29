@@ -15,4 +15,5 @@ public class ContentsDTO {
   private String detail                   ;
   private String rdate                    ;
   private int stock                       ;
+  
 }

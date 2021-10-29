@@ -1,12 +1,14 @@
 package com.study.orders;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 
 
 
-@Controller
 public class OrdersController {
 
 	@Autowired
@@ -14,6 +16,12 @@ public class OrdersController {
 	private OrdersService service;
 	
 	
+	@GetMapping("/orders/order")
+	public String order() {
+	 
+	      
+	   return "/orders/order";
+	  }
 	
 	
 	

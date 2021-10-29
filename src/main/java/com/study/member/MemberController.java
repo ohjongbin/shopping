@@ -27,13 +27,16 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.study.utility.Utility;
 
-@Controller
+@Controller //컨트롤러 명시
 public class MemberController {
 
 	@Autowired
 	@Qualifier("com.study.member.MemberServiceImpl")
 	private MemberService service;
+	
 
+	
+	
 	@GetMapping("/")
 	public String home() {
 
@@ -62,7 +65,7 @@ public class MemberController {
 		}
 
 		if (service.create(dto) > 0) {
-			return "redirect:/";
+			return "redirect:/";//메인으로간다.
 		} else {
 			return "error";
 		}
@@ -136,8 +139,10 @@ public class MemberController {
 	@PostMapping("/member/login")
 	public String login(@RequestParam Map<String, String> map, HttpSession session, HttpServletResponse response,
 			Model model) {
+		//@RequestParam Map<String, String> map 
+		// loginForm.jsp 에서 입력한(id,passwd) 값을 넘겨 받는다.
 
-		int cnt = service.loginCheck(map);
+		int cnt = service.loginCheck(map);// input 태그에서 입력받은(id,pw)데이터를 포장한 객체를 매개변수로 갖는다.
 
 		if (cnt > 0) {
 			String grade = service.getGrade(map.get("id"));
@@ -145,8 +150,8 @@ public class MemberController {
 			session.setAttribute("grade", grade);
 			// Cookie 저장,id저장 여부 및 id
 			Cookie cookie = null;
-			String c_id = map.get("c_id");
-			if (c_id != null) {
+			String c_id = map.get("c_id"); //Remember ID
+			if (c_id != null) {//null 값이 아닐떄 =true 
 				cookie = new Cookie("c_id", c_id); // c_id=> Y
 				cookie.setMaxAge(60 * 60 * 24 * 365);// 1년
 				response.addCookie(cookie);// 요청지(client:브라우저 컴) 쿠키 저장
@@ -170,6 +175,8 @@ public class MemberController {
 			return "redirect:/";
 		} else {
 			model.addAttribute("msg", "아이디 또는 비밀번호를 잘못 입력 했거나 <br>회원이 아닙니다. 회원가입 하세요");
+			//Model 객체를 통해 msg = 아이디 또는 비밀번호를 잘못 입력 했거나 <br>회원이 아닙니다. 회원가입 하세요 
+			//으로 html에 값을 넘겨준다.
 			return "/member/errorMsg";
 		}
 

@@ -17,8 +17,7 @@
   
   <img class="img-rounded" src="/pstorage/${dto.filename}" style="width:280px">
    
-   <button type="button" class="btn btn-default" onclick="location.href='order'" >주문</button>
-   <button type="button" class="btn btn-default" onclick="location.href='cart'">장바구니</button>
+   
     
   </div>
   
@@ -30,7 +29,21 @@
     <p>가격:${dto.price}</p>
     <p>상세정보:${dto.detail}</p>
     <p>재고:${dto.stock}</p>
+    <p>합계:${dto.price}</p>
     
+    <!-- 수량  -->
+    <!-- <form name ="form1" method ="post" action =" "  -->
+   
+  	<select name ="amount">
+  		<c:forEach begin ="1" end ="10" var="i">
+  		 <option value ="${i}">${i}</option>
+  		</c:forEach>
+  	</select>
+    
+    <!-- </form> -->
+    
+   <button type="button" class="btn btn-default" onclick="location.href='/orders/order'" >주문</button>
+   <button type="button" class="btn btn-default" onclick="location.href='/cart/list'">장바구니</button>
    
   </div>
   </ul>

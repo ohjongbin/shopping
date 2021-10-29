@@ -88,6 +88,8 @@
 				<ul class="nav navbar-nav navbar-right">
 					<c:choose>
 						<c:when test="${empty sessionScope.id }">
+							<li><a href="./chatting/naver_chatting"><span
+									class="glyphicon glyphicon-comment"></span> 챗 봇</a></li>
 							<li><a href="${root}/member/agree"><span
 									class="glyphicon glyphicon-user"></span> Sign Up</a></li>
 							<li><a href="${root}/member/login"><span
@@ -105,7 +107,9 @@
 									class="glyphicon glyphicon-log-out"></span> 로그아웃</a></li>
 						</c:when>
 						<c:otherwise>
-							<li><a href="${root}/contents/cart"><span
+							<li><a href="./chatting/naver_chatting"><span
+									class="glyphicon glyphicon-comment"></span> 챗 봇</a></li>
+							<li><a href="${root}/order/cart"><span
 									class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
 							<li><a href="${root}/member/update"><span
 									class="glyphicon glyphicon-edit"></span> 회원수정</a></li>

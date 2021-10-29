@@ -24,5 +24,5 @@ public class MemberDTO {
 	private MultipartFile fnameMF				 ;
 	private String grade                         ;
 	
-	private List<OrdersDTO> list				 ;
+	private List<OrdersDTO> list				 ; //OrdersDTO 객체를 List에 담기
 }

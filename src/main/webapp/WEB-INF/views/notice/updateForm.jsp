@@ -9,9 +9,9 @@
 <body> 
  
 <div class="container">
-<h1 class="col-sm-offset-2 col-sm-10">게시판 수정</h1>
+<h1 class="col-sm-offset-2 col-sm-10">공지 수정</h1>
 <form class="form-horizontal" 
-      action="./update"
+      action="/admin/notice/update"
       method="post"
       >
 <input type="hidden" name="noticeno" value="${dto.noticeno}">

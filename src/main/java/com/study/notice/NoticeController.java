@@ -47,7 +47,7 @@ public class NoticeController {
 	    if (pcnt != 1) {
 	      return "./passwdError";
 	    } else if (cnt==1) {
-	      return "redirect:./list";
+	      return "redirect:/notice/list";
 	    } else {
 	      return "./error";
 	    }
@@ -61,7 +61,7 @@ public class NoticeController {
 	    return "/notice/update";
 	  }
 	 
-	  @PostMapping("/notice/update")
+	  @PostMapping("/admin/notice/update")
 	  public String update(NoticeDTO dto) {
 	 
 	    Map map = new HashMap();
@@ -78,7 +78,7 @@ public class NoticeController {
 	    if (pcnt != 1) {
 	      return "./passwdError";
 	    } else if (cnt==1) {
-	      return "redirect:./list";
+	      return "redirect:/notice/list";
 	    } else {
 	      return "./error";
 	    }
@@ -103,18 +103,18 @@ public class NoticeController {
 	
 	
 
-	@GetMapping("/notice/create")
+	@GetMapping("admin/notice/create")
 	  public String create() {
 	 
 	    return "/notice/create";
 	  }
 	
-	@PostMapping("/notice/create")
+	@PostMapping("admin/notice/create")
 	  public String create(NoticeDTO dto) {
 	 
 	    if (service.create(dto) == 1) {
 	    	System.out.println(dto.getContent());
-	      return "redirect:./list";
+	      return "redirect:/notice/list";
 	    } else {
 	      return "/error";
 	    }

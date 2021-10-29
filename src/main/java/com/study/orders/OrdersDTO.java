@@ -4,9 +4,9 @@ import lombok.Data;
  
 @Data
 public class OrdersDTO {
-  private int   orderno              ;
-  private int   cartno               ;
-  private int   contentsno           ;
+  private int   orderno              ; //기본키
+  private int   cartno               ; //외래키 
+  private int   contentsno           ; //외래키 -> cart 
   private String odate               ;
   private int   quantity             ;
   private int   total                ;
